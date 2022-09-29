@@ -7,6 +7,7 @@ http://user:pass@1.2.3.4:42254
 ```
 
 ## Run proxy rotator
+```
 docker run -d --name proxy_rotator \
     -v $(pwd)/proxylist.txt:/app/proxylist.txt \
     -e NODE_REQUESTS_PER_PROXY=100 \
@@ -14,6 +15,7 @@ docker run -d --name proxy_rotator \
     -e NODE_MAX_TIME=60 \
     -p 9000:9000 \
     ghcr.io/solohin/http-proxy-rotator:main
+```
 
 ## Development
 ```
